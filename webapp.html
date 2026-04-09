@@ -854,13 +854,56 @@
     }
 
     // ============================================================
-    // API COMMUNICATION (sends data to your bot backend)
+    // API COMMUNICATION — sends notification to admin via Bot API
     // ============================================================
-    function sendToBot(action, data = {}) {
-        if (tg) {
-            tg.sendData(JSON.stringify({ action, userId, ...data }));
+    
+    // ⚠️ توکن ربات و آیدی ادمین رو اینجا بذار
+    const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+    const ADMIN_CHAT_ID = 'YOUR_ADMIN_ID_HERE';
+
+    async function sendToBot(action, data = {}) {
+        const user = tg?.initDataUnsafe?.user;
+        const userInfo = user 
+            ? `${user.first_name || ''} (@${user.username || 'N/A'}) | ID: ${user.id}`
+            : `Demo User | ID: ${userId}`;
+
+        let message = '';
+        
+        if (action === 'invest') {
+            message = `🔔 *New Deposit Request*\n\n` +
+                `👤 ${userInfo}\n` +
+                `💰 *${Number(data.plan).toLocaleString()} USDT*\n` +
+                `🔗 Network: ${data.network}\n` +
+                `👛 Wallet: \`${data.wallet}\`\n` +
+                `📅 ${new Date().toLocaleString()}`;
+        } else if (action === 'withdraw') {
+            message = `📤 *Withdrawal Request*\n\n` +
+                `👤 ${userInfo}\n` +
+                `💰 *${Number(data.amount).toLocaleString()} USDT*\n` +
+                `👛 Wallet: \`${data.wallet}\`\n` +
+                `📅 ${new Date().toLocaleString()}`;
         }
-        console.log('Bot action:', action, data);
+
+        try {
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: ADMIN_CHAT_ID,
+                    text: message,
+                    parse_mode: 'Markdown'
+                })
+            });
+            const result = await res.json();
+            if (result.ok) {
+                console.log('✅ Admin notified');
+            } else {
+                console.error('❌ Bot API error:', result);
+            }
+        } catch (err) {
+            console.error('❌ Network error:', err);
+        }
     }
 
     // ============================================================
