@@ -30,7 +30,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans Ara
 .lang-btn{background:var(--card);border:1px solid var(--card-border);border-radius:10px;padding:7px 14px;color:var(--text);font-size:12px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:6px;transition:.3s}
 .lang-btn:active{transform:scale(.96)}
 .hero{text-align:center;padding:22px 0 18px}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);color:var(--emerald);margin-bottom:14px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);color:var(--emerald);margin-bottom:14px;letter-spacing:.3px}
 .hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);animation:float 2s ease infinite}
 .hero h1{font-family:'Playfair Display';font-size:30px;font-weight:800;line-height:1.2;background:linear-gradient(135deg,var(--text) 0%,var(--gold) 40%,var(--gold-light) 60%,var(--text) 100%);background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s linear infinite;margin-bottom:6px}
 .hero p{font-size:13px;color:var(--text2);font-weight:300}
@@ -43,7 +43,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans Ara
 .bnav{flex:1;background:none;border:none;color:var(--text3);display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 4px;border-radius:10px;cursor:pointer;font-family:inherit;transition:.25s}
 .bnav.active{color:var(--gold);background:var(--glow)}
 .bnav:active{transform:scale(.92)}
-.bnav-icon{font-size:18px}.bnav-label{font-size:8px;font-weight:600;white-space:nowrap}
+.bnav-icon{font-size:18px}.bnav-label{font-size:8px;font-weight:600;white-space:nowrap;letter-spacing:.3px}
 .card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;backdrop-filter:blur(8px);transition:.35s;margin-bottom:12px;position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;inset:0;border-radius:16px;background:linear-gradient(135deg,rgba(212,168,83,0.03),transparent 60%);pointer-events:none}
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
@@ -57,7 +57,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans Ara
 .plan.sel .plan-check{display:flex}
 .invest-form{padding:20px}
 .profit-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
-.profit-tag{padding:6px 12px;border-radius:10px;font-size:11px;font-weight:600}
+.profit-tag{padding:6px 12px;border-radius:10px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:5px}
 .profit-tag.weekly{background:rgba(212,168,83,0.1);color:var(--gold);border:1px solid rgba(212,168,83,0.2)}
 .profit-tag.monthly{background:rgba(46,204,113,0.1);color:var(--emerald);border:1px solid rgba(46,204,113,0.2)}
 .profit-tag.free{background:rgba(255,255,255,0.04);color:var(--text2);border:1px solid rgba(255,255,255,0.06)}
@@ -72,7 +72,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans Ara
 .field{width:100%;background:rgba(255,255,255,0.025);border:1px solid var(--card-border);border-radius:11px;padding:13px 14px;color:var(--text);font-size:13px;font-family:'DM Sans',monospace;outline:none;transition:.3s;margin-bottom:14px}
 .field:focus{border-color:var(--gold);box-shadow:0 0 20px var(--glow)}
 .field::placeholder{color:var(--text3)}
-.btn{width:100%;border:none;padding:14px;border-radius:13px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:.3s}
+.btn{width:100%;border:none;padding:14px;border-radius:13px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:.3s;position:relative;overflow:hidden}
 .btn:active{transform:scale(.98)}
 .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#0b0e11;box-shadow:0 6px 25px rgba(212,168,83,0.3)}
 .btn-outline{background:var(--card);border:1px solid var(--card-border);color:var(--text)}
@@ -85,14 +85,15 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans Ara
 .ref-pct{font-family:'Playfair Display';font-size:42px;font-weight:900;color:var(--gold)}
 .ref-link-box{display:flex;gap:8px;padding:0 18px 18px}
 .ref-link{flex:1;background:rgba(255,255,255,0.025);border:1px solid var(--card-border);border-radius:10px;padding:11px;color:var(--text);font-size:10px;font-family:monospace;outline:none}
-.copy-btn{background:linear-gradient(135deg,var(--gold),var(--gold-dark));border:none;color:#0b0e11;padding:11px 16px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+.copy-btn{background:linear-gradient(135deg,var(--gold),var(--gold-dark));border:none;color:#0b0e11;padding:11px 16px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
 .copy-btn:active{transform:scale(.96)}
 .bal-main{text-align:center;padding:24px 18px 16px}
 .bal-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1.2px}
 .bal-amt{font-family:'Playfair Display';font-size:38px;font-weight:900;background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:4px 0}
 .bal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 18px 18px}
 .bal-item{background:rgba(255,255,255,0.02);border-radius:11px;padding:14px;text-align:center;border:1px solid rgba(255,255,255,0.03)}
-.bal-item-v{font-size:16px;font-weight:700}.bal-item-l{font-size:10px;color:var(--text3);margin-top:3px}
+.bal-item-v{font-size:16px;font-weight:700}
+.bal-item-l{font-size:10px;color:var(--text3);margin-top:3px}
 .wd-section{padding:20px}
 .wd-avail{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.15);color:var(--emerald);margin-bottom:14px}
 .wd-free{text-align:center;margin-top:12px;font-size:11px;color:var(--emerald);padding:8px;border-radius:10px;background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.1)}
@@ -139,51 +140,50 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans Ara
 </div>
 </div>
 <script>
-var canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');var W,H,pts=[];function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}resize();addEventListener('resize',resize);for(var i=0;i<40;i++)pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.5,dx:(Math.random()-.5)*.3,dy:(Math.random()-.5)*.3,o:Math.random()*.3+.1});function draw(){ctx.clearRect(0,0,W,H);pts.forEach(function(p){p.x+=p.dx;p.y+=p.dy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(212,168,83,'+p.o+')';ctx.fill()});requestAnimationFrame(draw)}draw();
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');let W,H,pts=[];function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}resize();addEventListener('resize',resize);for(let i=0;i<40;i++)pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.5,dx:(Math.random()-.5)*.3,dy:(Math.random()-.5)*.3,o:Math.random()*.3+.1});function draw(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.x+=p.dx;p.y+=p.dy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(212,168,83,${p.o})`;ctx.fill()});requestAnimationFrame(draw)}draw();
 
-var tg=window.Telegram&&window.Telegram.WebApp;if(tg){tg.ready();tg.expand();tg.setHeaderColor('#0b0e11');tg.setBackgroundColor('#0b0e11')}
-var userId=tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user?tg.initDataUnsafe.user.id:'demo';
-var userFirst=tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user?tg.initDataUnsafe.user.first_name:'User';
-var userUsername=tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user?tg.initDataUnsafe.user.username:'';
+const tg=window.Telegram?.WebApp;if(tg){tg.ready();tg.expand();tg.setHeaderColor('#0b0e11');tg.setBackgroundColor('#0b0e11')}
+const userId=tg?.initDataUnsafe?.user?.id||'demo';
 
-// ===== CONFIG =====
-var BOT_TOKEN='8349039991:AAFq8NNkw1nnYSvmfzmcvah5NhMSCk2dMeE';
-var ADMIN_ID='6923634235';
+let S={lang:localStorage.getItem('cv_lang')||'en',page:'plans',plan:null,net:0,wallet:localStorage.getItem('cv_wallet')||'',bal:{invested:0,profit:0,withdrawn:0,available:0,referrals:0,refProfit:0},successMsg:''};
 
-var S={lang:localStorage.getItem('cv_lang')||'en',page:'plans',plan:null,net:0,wallet:localStorage.getItem('cv_wallet')||'',bal:{invested:0,profit:0,withdrawn:0,available:0,referrals:0,refProfit:0},successMsg:''};
-
-var T={
-ckb:{dir:'rtl',flag:'🇮🇶',name:'کوردی',hero:'سەرمایەگوزاری زیرەکانە',sub:'سوودی ڕاستەقینە لە ئاربیتراژی کریپتۆ',live:'ئاکتیڤ',plans:'پلانەکان',how:'چۆن؟',ref:'ناساندن',bal:'باڵانس',wd:'بەرداشت',selPlan:'پلانێک هەڵبژێرە',selNet:'تۆڕ هەڵبژێرە',walletLbl:'ناونیشانی جزدان',walletPh:'ناونیشانی جزدانی USDT',invest:'سەرمایەگوزاری بکە',usdt:'تیتر',w:'هەفتانە',m:'مانگانە',free:'بەرداشت ئازاد',s1:'پلان هەڵبژێرە',s1d:'لە ٥٠ بۆ ١٠٠,٠٠٠ USDT',s2:'واریزکردن',s2d:'USDT بنێرە بۆ ناونیشانی جزدان',s3:'سوود وەربگرە',s3d:'سوودەکەت هەفتانە یان مانگانە',s4:'بەرداشت',s4d:'هەر کاتێک ئازادانە بەرداشت بکە',refT:'هاوڕێکانت بناسێنە',refD:'١٠٪ سوودی ناساندن',refN:'ناساندن ئیختیارییە',refB:'پاداشت',copy:'کۆپی',copied:'کۆپی کرا!',invested:'سەرمایە',profit:'سوود',withdrawn:'بەرداشتکراو',avail:'بەردەست',referrals:'ناساندن',refE:'سوودی ناساندن',wdAmt:'بڕی بەرداشت',wdBtn:'داواکاری بەرداشت',wdFree:'بەرداشت ئازاد — بێ مەرج',depT:'واریزکردن',depW:'تەنها USDT بنێرە لەسەر',depOk:'ئەدمین پشتڕاست دەکاتەوە',cpW:'کۆپی کرا!',amt:'بڕ',net:'تۆڕ',noW:'جزدانت بنووسە',ok:'سەرکەوتوو!',wdS:'تۆمارکرا.',t1:'پاراستن',t1d:'ئەمنیەتی بەرز',t2:'خێرا',t2d:'پرۆسەی کاتژمێری',t3:'ئازاد',t3d:'بەرداشت بێ مەرج'},
-en:{dir:'ltr',flag:'🇬🇧',name:'English',hero:'Smart Investment',sub:'Real profits from crypto arbitrage',live:'LIVE',plans:'Plans',how:'How',ref:'Referral',bal:'Balance',wd:'Withdraw',selPlan:'Select a Plan',selNet:'Select Network',walletLbl:'Wallet Address',walletPh:'Enter your USDT wallet',invest:'Invest Now',usdt:'USDT',w:'Weekly',m:'Monthly',free:'Free Withdrawal',s1:'Choose Plan',s1d:'Select from 50 to 100,000 USDT',s2:'Deposit',s2d:'Send USDT to the wallet address',s3:'Earn Profit',s3d:'Receive profit weekly or monthly',s4:'Withdraw',s4d:'Withdraw freely, anytime',refT:'Invite Friends',refD:'Earn 10% of referral profits',refN:'Referral is optional — no conditions',refB:'Referral Bonus',copy:'Copy',copied:'Copied!',invested:'Invested',profit:'Profit',withdrawn:'Withdrawn',avail:'Available',referrals:'Referrals',refE:'Ref. Earnings',wdAmt:'Amount (USDT)',wdBtn:'Request Withdrawal',wdFree:'Free withdrawal — no conditions',depT:'Deposit',depW:'Send only USDT on',depOk:'Admin will verify your transaction',cpW:'Address copied!',amt:'Amount',net:'Network',noW:'Enter wallet first',ok:'Success!',wdS:'Withdrawal submitted.',t1:'Secure',t1d:'Bank-grade security',t2:'Fast',t2d:'Hourly processing',t3:'Free',t3d:'No withdrawal fees'},
-ar:{dir:'rtl',flag:'🇸🇦',name:'العربية',hero:'استثمار ذكي',sub:'أرباح حقيقية من المراجحة',live:'مباشر',plans:'الخطط',how:'كيف؟',ref:'إحالة',bal:'الرصيد',wd:'سحب',selPlan:'اختر خطة',selNet:'اختر الشبكة',walletLbl:'عنوان المحفظة',walletPh:'أدخل عنوان USDT',invest:'استثمر الآن',usdt:'تيثر',w:'أسبوعياً',m:'شهرياً',free:'سحب مجاني',s1:'اختر خطة',s1d:'من ٥٠ إلى ١٠٠,٠٠٠ USDT',s2:'إيداع',s2d:'أرسل USDT إلى العنوان',s3:'احصل على الربح',s3d:'أرباح أسبوعية أو شهرية',s4:'سحب',s4d:'اسحب بحرية في أي وقت',refT:'ادعُ أصدقاءك',refD:'١٠٪ من أرباح الإحالة',refN:'الإحالة اختيارية — بدون شروط',refB:'مكافأة',copy:'نسخ',copied:'تم!',invested:'المستثمر',profit:'الربح',withdrawn:'المسحوب',avail:'المتاح',referrals:'إحالات',refE:'أرباح الإحالة',wdAmt:'المبلغ (USDT)',wdBtn:'طلب سحب',wdFree:'السحب مجاني — بدون شروط',depT:'إيداع',depW:'أرسل USDT فقط على',depOk:'سيتم التحقق من المشرف',cpW:'تم النسخ!',amt:'المبلغ',net:'الشبكة',noW:'أدخل عنوان محفظتك',ok:'تم!',wdS:'تم تقديم طلب السحب.',t1:'آمن',t1d:'أمان بنكي',t2:'سريع',t2d:'معالجة كل ساعة',t3:'مجاني',t3d:'بدون رسوم'}
+const T={
+ckb:{dir:'rtl',flag:'🇮🇶',name:'کوردی',hero:'سەرمایەگوزاری زیرەکانە',sub:'سوودی ڕاستەقینە لە ئاربیتراژی کریپتۆ',live:'ئاکتیڤ',plans:'پلانەکان',how:'چۆن؟',ref:'ناساندن',bal:'باڵانس',wd:'بەرداشت',selPlan:'پلانێک هەڵبژێرە',selNet:'تۆڕ هەڵبژێرە',walletLbl:'ناونیشانی جزدان',walletPh:'ناونیشانی جزدانی USDT',invest:'سەرمایەگوزاری بکە',usdt:'تیتر',w:'هەفتانە',m:'مانگانە',free:'بەرداشت ئازاد',s1:'پلان هەڵبژێرە',s1d:'لە ٥٠ بۆ ١٠٠,٠٠٠ USDT',s2:'واریزکردن',s2d:'USDT بنێرە بۆ ناونیشانی جزدان',s3:'سوود وەربگرە',s3d:'سوودەکەت هەفتانە یان مانگانە',s4:'بەرداشت',s4d:'هەر کاتێک ئازادانە بەرداشت بکە',refT:'هاوڕێکانت بناسێنە',refD:'١٠٪ سوودی ناساندن',refN:'ناساندن ئیختیارییە',refB:'پاداشت',copy:'کۆپی',copied:'کۆپی کرا!',invested:'سەرمایە',profit:'سوود',withdrawn:'بەرداشتکراو',avail:'بەردەست',referrals:'ناساندن',refE:'سوودی ناساندن',wdAmt:'بڕی بەرداشت',wdBtn:'داواکاری بەرداشت',wdFree:'بەرداشت ئازاد — بێ مەرج',depT:'واریزکردن',depW:'تەنها USDT بنێرە لەسەر',depOk:'ئەدمین پشتڕاست دەکاتەوە',cpW:'کۆپی کرا!',amt:'بڕ',net:'تۆڕ',noW:'جزدانت بنووسە',ok:'سەرکەوتوو!',wdS:'داواکاری بەرداشتکردنت تۆمارکرا.',t1:'پاراستن',t1d:'ئەمنیەتی بەرز',t2:'خێرا',t2d:'پرۆسەی کاتژمێری',t3:'ئازاد',t3d:'بەرداشت بێ مەرج'},
+en:{dir:'ltr',flag:'🇬🇧',name:'English',hero:'Smart Investment',sub:'Real profits from crypto arbitrage',live:'LIVE',plans:'Plans',how:'How',ref:'Referral',bal:'Balance',wd:'Withdraw',selPlan:'Select a Plan',selNet:'Select Network',walletLbl:'Wallet Address',walletPh:'Enter your USDT wallet',invest:'Invest Now',usdt:'USDT',w:'Weekly',m:'Monthly',free:'Free Withdrawal',s1:'Choose Plan',s1d:'Select from 50 to 100,000 USDT',s2:'Deposit',s2d:'Send USDT to the wallet address',s3:'Earn Profit',s3d:'Receive profit weekly or monthly',s4:'Withdraw',s4d:'Withdraw freely, anytime',refT:'Invite Friends',refD:'Earn 10% of referral profits',refN:'Referral is optional — no conditions',refB:'Referral Bonus',copy:'Copy',copied:'Copied!',invested:'Invested',profit:'Profit',withdrawn:'Withdrawn',avail:'Available',referrals:'Referrals',refE:'Ref. Earnings',wdAmt:'Amount (USDT)',wdBtn:'Request Withdrawal',wdFree:'Free withdrawal — no conditions',depT:'Deposit',depW:'Send only USDT on',depOk:'Admin will verify your transaction',cpW:'Address copied!',amt:'Amount',net:'Network',noW:'Enter wallet first',ok:'Success!',wdS:'Withdrawal request submitted.',t1:'Secure',t1d:'Bank-grade security',t2:'Fast',t2d:'Hourly processing',t3:'Free',t3d:'No withdrawal fees'},
+ar:{dir:'rtl',flag:'🇸🇦',name:'العربية',hero:'استثمار ذكي',sub:'أرباح حقيقية من المراجحة',live:'مباشر',plans:'الخطط',how:'كيف؟',ref:'إحالة',bal:'الرصيد',wd:'سحب',selPlan:'اختر خطة',selNet:'اختر الشبكة',walletLbl:'عنوان المحفظة',walletPh:'أدخل عنوان USDT',invest:'استثمر الآن',usdt:'تيثر',w:'أسبوعياً',m:'شهرياً',free:'سحب مجاني',s1:'اختر خطة',s1d:'من ٥٠ إلى ١٠٠,٠٠٠ USDT',s2:'إيداع',s2d:'أرسل USDT إلى العنوان',s3:'احصل على الربح',s3d:'أرباح أسبوعية أو شهرية',s4:'سحب',s4d:'اسحب بحرية في أي وقت',refT:'ادعُ أصدقاءك',refD:'١٠٪ من أرباح الإحالة',refN:'الإحالة اختيارية — السحب بدون شروط',refB:'مكافأة',copy:'نسخ',copied:'تم!',invested:'المستثمر',profit:'الربح',withdrawn:'المسحوب',avail:'المتاح',referrals:'إحالات',refE:'أرباح الإحالة',wdAmt:'المبلغ (USDT)',wdBtn:'طلب سحب',wdFree:'السحب مجاني — بدون شروط',depT:'إيداع',depW:'أرسل USDT فقط على',depOk:'سيتم التحقق من المشرف',cpW:'تم النسخ!',amt:'المبلغ',net:'الشبكة',noW:'أدخل عنوان محفظتك',ok:'تم!',wdS:'تم تقديم طلب السحب.',t1:'آمن',t1d:'أمان بنكي',t2:'سريع',t2d:'معالجة كل ساعة',t3:'مجاني',t3d:'بدون رسوم'}
 };
 
-var PLANS=[50,100,200,500,1000,2000,5000,10000,20000,50000,100000];
-var NETS=[
+const PLANS=[50,100,200,500,1000,2000,5000,10000,20000,50000,100000];
+const NETS=[
 {name:'TRC-20',chain:'TRON',color:'#FF0013',wallet:'0xa9d205143f5e6e533ee543a8995d2d3b34822e44'},
 {name:'ERC-20',chain:'Ethereum',color:'#627EEA',wallet:'0xa9d205143f5e6e533ee543a8995d2d3b34822e44'},
-{name:'BEP-20',chain:'BSC',color:'#F3BA2F',wallet:'0xa9d205143f5e6e533ee543a8995d2d3b34822e44'}
+{name:'BEP-20',chain:'BSC',color:'#F3BA2F',wallet:'0xa9d205143f5e6e533ee543a8995d2d3b34822e44'},
 ];
 
-function t(k){return(T[S.lang]&&T[S.lang][k])||T.en[k]||k}
-function fmt(n){return Number(n).toLocaleString()}
-function rtl(){return T[S.lang]&&T[S.lang].dir==='rtl'}
-function toast(m){var e=document.getElementById('toast');e.textContent=m;e.classList.add('show');setTimeout(function(){e.classList.remove('show')},2500)}
-function haptic(ty){if(tg&&tg.HapticFeedback)tg.HapticFeedback.impactOccurred(ty||'light')}
-function cp(text,msg){if(navigator.clipboard)navigator.clipboard.writeText(text).then(function(){toast(msg||t('copied'));haptic('medium')})}
+const API_BASE='https://chute-subsiding-tassel.ngrok-free.dev';
+const t=k=>T[S.lang]?.[k]||T.en[k]||k;
+const fmt=n=>Number(n).toLocaleString();
+const rtl=()=>T[S.lang]?.dir==='rtl';
 
-// ===== SEND TO ADMIN VIA BOT API =====
-function notifyAdmin(msg){
-fetch('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage',{
-method:'POST',headers:{'Content-Type':'application/json'},
-body:JSON.stringify({chat_id:ADMIN_ID,text:msg,parse_mode:'Markdown'})
-}).then(function(r){return r.json()}).then(function(d){
-if(d.ok){console.log('Admin notified')}else{console.error('Bot API error',d)}
-}).catch(function(e){console.error('Network error',e)})
+function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2500)}
+function haptic(t='light'){tg?.HapticFeedback?.impactOccurred?.(t)}
+function cp(text,msg){navigator.clipboard?.writeText(text).then(()=>{toast(msg||t('copied'));haptic('medium')})}
+
+async function loadBal(){
+if(!userId||userId==='demo')return;
+try{const r=await fetch(`${API_BASE}/api/balance?user_id=${userId}`,{headers:{'ngrok-skip-browser-warning':'1'}});const d=await r.json();
+if(d.ok){S.bal=d.balance;if(d.wallet)S.wallet=d.wallet;render()}}catch(e){console.log('API offline')}
+}
+async function sendAPI(action,data={}){
+var u=tg&&tg.initDataUnsafe?tg.initDataUnsafe.user:null;
+try{const r=await fetch(`${API_BASE}/api/${action}`,{method:'POST',headers:{'Content-Type':'application/json','ngrok-skip-browser-warning':'1'},
+body:JSON.stringify({user_id:userId,username:u?u.username:'',first_name:u?u.first_name:'',...data})});
+const d=await r.json();if(d.ok)setTimeout(loadBal,1000);else if(d.error==='Insufficient balance')toast('⚠️ '+t('avail')+': '+d.available+' USDT');
+return d}catch(e){toast('⚠️ Connection error');return{ok:false}}
 }
 
 function render(){
-var a=document.getElementById('app');
+const a=document.getElementById('app');
 document.body.setAttribute('dir',rtl()?'rtl':'ltr');
 a.innerHTML=rHeader()+rHero()+rStats()+rTrust()+rPage()+rNav();
 bindEvents();
@@ -196,7 +196,7 @@ function rNav(){var tabs=[{id:'plans',i:'💎',l:t('plans')},{id:'how',i:'⚡',l
 function rPage(){var P={plans:pgPlans,how:pgHow,ref:pgRef,bal:pgBal,wd:pgWd,dep:pgDep,ok:pgOk};return'<div class="anim-5">'+((P[S.page]||pgPlans)())+'</div>'}
 
 function pgPlans(){var h='<div style="font-size:14px;font-weight:600;margin-bottom:10px">'+t('selPlan')+'</div><div class="plans-grid">';PLANS.forEach(function(p){h+='<div class="card plan '+(S.plan===p?'sel':'')+'" data-p="'+p+'"><div class="plan-check">✓</div><div class="plan-amt">'+fmt(p)+'</div><div class="plan-cur">'+t('usdt')+'</div></div>'});h+='</div>';if(S.plan){h+='<div class="card invest-form" style="animation:scale-in .3s ease"><div class="profit-row"><span class="profit-tag weekly">📈 '+t('w')+': ~25%</span><span class="profit-tag monthly">🚀 '+t('m')+': ~100%</span><span class="profit-tag free">✅ '+t('free')+'</span></div><label class="field-label">'+t('selNet')+'</label><div class="nets">';NETS.forEach(function(n,i){h+='<button class="net '+(S.net===i?'active':'')+'" data-n="'+i+'"><span class="net-dot" style="background:'+n.color+'"></span><span class="net-name">'+n.name+'</span><span class="net-chain">'+n.chain+'</span></button>'});h+='</div><label class="field-label">'+t('walletLbl')+'</label><input class="field" id="wIn" dir="ltr" placeholder="'+t('walletPh')+'" value="'+S.wallet+'"><button class="btn btn-gold" id="investBtn">'+t('invest')+' — '+fmt(S.plan)+' USDT</button></div>'}return h}
-function pgHow(){var steps=[{n:'1',tt:t('s1'),d:t('s1d'),i:'💎'},{n:'2',tt:t('s2'),d:t('s2d'),i:'📤'},{n:'3',tt:t('s3'),d:t('s3d'),i:'📈'},{n:'4',tt:t('s4'),d:t('s4d'),i:'💰'}];var h='';steps.forEach(function(s,i){h+='<div class="card" style="animation:fadeUp '+(0.3+i*0.1)+'s ease both"><div class="step"><div class="step-n">'+s.n+'</div><div><div class="step-t">'+s.tt+' '+s.i+'</div><div class="step-d">'+s.d+'</div></div></div></div>'});h+='<div class="card" style="padding:14px;text-align:center;border-color:rgba(46,204,113,0.2)"><span style="font-size:12px;color:var(--emerald)">✅ '+t('wdFree')+'</span></div>';return h}
+function pgHow(){var steps=[{n:'1',t:t('s1'),d:t('s1d'),i:'💎'},{n:'2',t:t('s2'),d:t('s2d'),i:'📤'},{n:'3',t:t('s3'),d:t('s3d'),i:'📈'},{n:'4',t:t('s4'),d:t('s4d'),i:'💰'}];var h='';steps.forEach(function(s,i){h+='<div class="card" style="animation:fadeUp '+(0.3+i*0.1)+'s ease both"><div class="step"><div class="step-n">'+s.n+'</div><div><div class="step-t">'+s.t+' '+s.i+'</div><div class="step-d">'+s.d+'</div></div></div></div>'});h+='<div class="card" style="padding:14px;text-align:center;border-color:rgba(46,204,113,0.2)"><span style="font-size:12px;color:var(--emerald)">✅ '+t('wdFree')+'</span></div>';return h}
 function pgRef(){var link='https://t.me/kurdcryptoz_bot?start=ref_'+userId;return'<div class="card"><div class="ref-hero"><div class="ref-icon">🤝</div><h2 style="font-family:Playfair Display;font-size:19px;font-weight:700;margin-bottom:6px">'+t('refT')+'</h2><p style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:16px">'+t('refD')+'</p><div class="ref-pct">10%</div><div style="font-size:11px;color:var(--text3);margin:4px 0 14px">'+t('refB')+'</div><div style="padding:5px 14px;border-radius:16px;background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.12);display:inline-block;font-size:10px;color:var(--emerald)">🔓 '+t('refN')+'</div></div><div class="ref-link-box"><input class="ref-link" value="'+link+'" readonly dir="ltr"><button class="copy-btn" onclick="cp(\''+link+'\',\''+t('copied')+'\')">'+t('copy')+'</button></div></div><div class="card" style="padding:16px"><div class="bal-grid" style="padding:0"><div class="bal-item"><div class="bal-item-v" style="color:var(--gold)">'+S.bal.referrals+'</div><div class="bal-item-l">'+t('referrals')+'</div></div><div class="bal-item"><div class="bal-item-v" style="color:var(--emerald)">'+fmt(S.bal.refProfit)+'</div><div class="bal-item-l">'+t('refE')+'</div></div></div></div>'}
 function pgBal(){return'<div class="card"><div class="bal-main"><div class="bal-lbl">'+t('avail')+'</div><div class="bal-amt">'+fmt(S.bal.available)+' <span style="font-size:14px;color:var(--text3)">USDT</span></div></div><div class="bal-grid"><div class="bal-item"><div class="bal-item-v" style="color:var(--gold)">'+fmt(S.bal.invested)+'</div><div class="bal-item-l">'+t('invested')+'</div></div><div class="bal-item"><div class="bal-item-v" style="color:var(--emerald)">'+fmt(S.bal.profit)+'</div><div class="bal-item-l">'+t('profit')+'</div></div><div class="bal-item"><div class="bal-item-v" style="color:var(--danger)">'+fmt(S.bal.withdrawn)+'</div><div class="bal-item-l">'+t('withdrawn')+'</div></div><div class="bal-item"><div class="bal-item-v" style="color:var(--gold-light)">'+fmt(S.bal.refProfit)+'</div><div class="bal-item-l">'+t('refE')+'</div></div></div></div>'}
 function pgWd(){return'<div class="card"><div class="wd-section"><div class="wd-avail">💵 '+t('avail')+': '+fmt(S.bal.available)+' USDT</div><label class="field-label">'+t('wdAmt')+'</label><input class="field" id="wdIn" type="number" dir="ltr" placeholder="0.00" min="1"><label class="field-label">'+t('walletLbl')+'</label><input class="field" id="wdW" dir="ltr" placeholder="'+t('walletPh')+'" value="'+S.wallet+'"><button class="btn btn-gold" id="wdBtn">'+t('wdBtn')+'</button><div class="wd-free">✅ '+t('wdFree')+'</div></div></div>'}
@@ -208,29 +208,28 @@ document.querySelectorAll('.bnav').forEach(function(b){b.addEventListener('click
 document.querySelectorAll('.plan').forEach(function(c){c.addEventListener('click',function(){S.plan=parseInt(c.dataset.p);haptic();render()})});
 document.querySelectorAll('.net').forEach(function(c){c.addEventListener('click',function(){S.net=parseInt(c.dataset.n);haptic();render()})});
 var ib=document.getElementById('investBtn');
-if(ib)ib.addEventListener('click',function(){
+if(ib)ib.addEventListener('click',async function(){
 var w=document.getElementById('wIn').value.trim();
 if(w.length<20){toast(t('noW'));return}
 S.wallet=w;localStorage.setItem('cv_wallet',w);haptic('heavy');
-notifyAdmin('🔔 *New Deposit*\n\n👤 '+userFirst+' (@'+userUsername+')\n🆔 `'+userId+'`\n💰 *'+fmt(S.plan)+' USDT*\n🔗 '+NETS[S.net].name+'\n👛 `'+w+'`');
-toast('✅ '+t('ok'));
+await sendAPI('invest',{plan:S.plan,network:NETS[S.net].name,wallet:w});
 S.page='dep';render();
 });
 var wb=document.getElementById('wdBtn');
-if(wb)wb.addEventListener('click',function(){
+if(wb)wb.addEventListener('click',async function(){
 var amt=parseFloat(document.getElementById('wdIn').value);
 var w=document.getElementById('wdW').value.trim();
 if(!amt||amt<=0){toast('⚠️');return}
 if(!w||w.length<20){toast(t('noW'));return}
 S.wallet=w;localStorage.setItem('cv_wallet',w);haptic('heavy');
-notifyAdmin('📤 *Withdrawal Request*\n\n👤 '+userFirst+' (@'+userUsername+')\n🆔 `'+userId+'`\n💰 *'+amt+' USDT*\n👛 `'+w+'`');
-S.successMsg=t('wdS');S.page='ok';render();
+var r=await sendAPI('withdraw',{amount:amt,wallet:w});
+if(r.ok){S.successMsg=t('wdS');S.page='ok';render()}
 });
 }
 function openLang(){document.getElementById('langModal').classList.add('open');haptic()}
 function setLang(l){S.lang=l;localStorage.setItem('cv_lang',l);document.getElementById('langModal').classList.remove('open');haptic('medium');render()}
 document.getElementById('langModal').addEventListener('click',function(e){if(e.target.id==='langModal')e.target.classList.remove('open')});
-render();
+render();loadBal();
 </script>
 </body>
 </html>
